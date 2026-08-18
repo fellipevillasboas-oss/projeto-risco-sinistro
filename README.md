@@ -17,7 +17,7 @@ O objetivo é prever a **probabilidade de ocorrência de sinistro** e segmentar 
 * Tratamento de valores ausentes;
 * One-Hot Encoding para variáveis categóricas;
 * Imputação pela mediana;
-* Divisão em treino e teste com estratificação;
+* Divisão dos dados em treino e teste com estratificação;
 * Treinamento de Regressão Logística e Random Forest;
 * Avaliação através de AUC e Gini;
 * Segmentação dos segurados por nível de risco.
@@ -25,20 +25,21 @@ O objetivo é prever a **probabilidade de ocorrência de sinistro** e segmentar 
 Como o dataset apresenta aproximadamente **3,6% de sinistros**, foi utilizado `class_weight='balanced'` para lidar com o desbalanceamento das classes.
 
 ## Resultados
-
-**Random Forest**
+O modelo **Random Forest** apresentou:
 
 * **AUC:** 0.628
 * **Gini:** 0.255
 
-O modelo foi utilizado para estimar a probabilidade de sinistro e classificar os segurados em 10 decis de risco.
-A segmentação permite analisar se a **taxa real de sinistros aumenta conforme o risco previsto pelo modelo**, avaliando sua capacidade de ordenação da carteira.
+O modelo foi utilizado para estimar a probabilidade de sinistro e classificar os segurados em **10 decis de risco**.
+
+A segmentação permite analisar a relação entre o **risco previsto pelo modelo** e a **taxa real de sinistros** observada em cada grupo.
 
 ### Sinistralidade por Decil
 
 ![Sinistralidade por Decil](outputs/grafico_decis_risco.png)
 
-A tabela de segmentação está disponível em:
+A tabela com a segmentação dos segurados está disponível em:
+
 `outputs/segmentacao_risco.xlsx`
 
 ## Tecnologias
@@ -49,6 +50,5 @@ A tabela de segmentação está disponível em:
 A abordagem pode ser utilizada como ferramenta de apoio à **segmentação de risco, análise de sinistralidade, subscrição e estudos de pricing** em seguros.
 
 ## Autor
-*Fellipe Oliveira*
+*Fellipe de Oliveira*
 Ciências Atuariais e Estatística — UFRJ
-
